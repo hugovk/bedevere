@@ -1,5 +1,9 @@
 FROM python:3.11-slim
 
+RUN apt-get -qq update \
+    && DEBIAN_FRONTEND=noninteractive apt-get -y install time \
+    && rm -rf /var/lib/apt/lists/*
+
 COPY requirements.txt requirements.txt
 COPY dev-requirements.txt dev-requirements.txt
 
