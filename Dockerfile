@@ -1,8 +1,9 @@
 FROM python:3.11-slim
 
+ENV PIP_NO_CACHE_DIR 1
+ENV PIP_ROOT_USER_ACTION ignore
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
-ENV PIP_NO_CACHE_DIR 1
 
 RUN apt-get -qq update \
     && DEBIAN_FRONTEND=noninteractive apt-get -y install time \
