@@ -1,5 +1,9 @@
 FROM python:3.11-slim
 
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+ENV PIP_NO_CACHE_DIR 1
+
 RUN apt-get -qq update \
     && DEBIAN_FRONTEND=noninteractive apt-get -y install time \
     && rm -rf /var/lib/apt/lists/*
