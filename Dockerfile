@@ -11,7 +11,6 @@ COPY dev-requirements.txt dev-requirements.txt
 COPY entrypoint.sh /entrypoint.sh
 COPY bedevere/ /bedevere/
 
-RUN time pip install --no-cache-dir -U pip
 RUN time pip install --no-cache-dir -r requirements.txt
 
 ENTRYPOINT ["/entrypoint.sh"]
