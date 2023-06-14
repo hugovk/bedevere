@@ -1,9 +1,5 @@
 #!/bin/sh -l
 
-pwd
-
-ls -l
-
-ls -l /
+cp -r /bedevere ./bedevere
 
 python -m bedevere
